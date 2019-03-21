@@ -28,8 +28,6 @@ router.get('/:userId/withdraw/:amount', function (req, res, next) {
 
     const trnsactionHistory = transaction.getTransactionForUser(userName);
 
-    console.log('---'+userName);
-
     res.render('transaction', { transaction: trnsactionHistory, userName: userName });
 
 });
